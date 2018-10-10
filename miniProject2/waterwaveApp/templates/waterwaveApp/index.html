@@ -1,0 +1,20 @@
+
+<h1><em>User Playlist</em></h1>
+
+
+{% if latest_playlist %}
+
+<ul>
+    {% for UserPlaylist in latest_playlist %}
+    <li><h3>{{ UserPlaylist.songName }}</h3></li>
+    <li><h2>{{ UserPlaylist.album }}</h2></li>
+    <li>{{ UserPlaylist.artist }}</li>
+    <li>{{ UserPlaylist.duration }}</li>
+    <li>{{ UserPlaylist.rating }}</li>
+    <hr/>
+
+    {% endfor %}
+</ul>
+{% else %}
+<p>No playlist are available.</p>
+{% endif %}
